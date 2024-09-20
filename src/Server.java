@@ -76,7 +76,7 @@ public class Server {
 
     private static LinkedHashMap<String, String> parseJson(String json) {
         LinkedHashMap<String, String> map = new LinkedHashMap<>();
-        json = json.trim().replaceAll("[{}\"]", "");  // Убираем фигурные скобки и кавычки
+        json = json.trim().replaceAll("[{}\"]", "");
         String[] pairs = json.split(",");
         for (String pair : pairs) {
             String[] keyValue = pair.split(":");

@@ -6,7 +6,6 @@
     <title>xxxxxx</title>
 
     <style>
-        /* Основные стили для страницы */
         .main-area {
             background-color: #111;
             padding: 20px;
@@ -22,20 +21,18 @@
             height: 100%;
         }
         .area {
-            fill: rgba(0, 0, 255, 0.2); /* Полупрозрачный синий цвет */
+            fill: rgba(0, 0, 255, 0.2);
         }
 
-        /* Стиль для текста */
         .axis-text {
             fill: white;
             font-family: serif;
-            font-size: 10px; /* Шрифт остается маленьким */
+            font-size: 10px;
         }
 
-        /* Линии осей */
         .axis-line {
             stroke: white;
-            stroke-width: 0.5; /* Линии еще тоньше */
+            stroke-width: 0.5;
         }
         body {
             font-family: serif;
@@ -50,12 +47,10 @@
             border-spacing: 2px;
         }
 
-        /* Столбец с контейнером осей */
         td.main-area {
-            width: 100%; /* Занимает оставшееся пространство */
+            width: 100%;
         }
 
-        /* Шапка */
         .header {
             font-family: serif;
             font-style: normal;
@@ -72,7 +67,6 @@
             align-items: center;
         }
 
-        /* Левый столбец с формой */
         .form-section {
             background-color: #222;
             padding: 20px;
@@ -125,7 +119,6 @@
             padding: 10px;
         }
 
-        /* Центральная область */
         .main-area {
             background-color: #111;
             padding: 20px;
@@ -133,7 +126,6 @@
             border: 1px solid #555;
         }
 
-        /* Правый столбец для истории */
         .log-section {
             background-color: #222;
             padding: 20px;
@@ -153,7 +145,6 @@
             text-align: center;
         }
 
-        /* Селекторы классов, дочерних элементов, и атрибутов */
         input[type="number"] {
             border-radius: 5px;
         }
@@ -162,7 +153,6 @@
             border-color: #777;
         }
 
-        /* Отступы для элементов ввода */
         .form-section input {
             margin-bottom: 15px;
         }
@@ -219,44 +209,35 @@
         <td class="main-area">
 
             <svg viewBox="-100 -100 200 200">
-                <!-- Ось X -->
                 <line x1="-90" y1="0" x2="90" y2="0" class="axis-line" />
-                <!-- Ось Y -->
                 <line x1="0" y1="-90" x2="0" y2="90" class="axis-line" />
 
-                <!-- Стрелка на оси X (вправо) -->
                 <line x1="90" y1="0" x2="85" y2="-5" class="axis-line" />
                 <line x1="90" y1="0" x2="85" y2="5" class="axis-line" />
 
-                <!-- Стрелка на оси Y (вверх) -->
                 <line x1="0" y1="-90" x2="-5" y2="-85" class="axis-line" />
                 <line x1="0" y1="-90" x2="5" y2="-85" class="axis-line" />
 
-                <!-- Метки на оси X (равномерные расстояния) -->
                 <line x1="-80" y1="5" x2="-80" y2="-5" class="axis-line" />
                 <line x1="-40" y1="5" x2="-40" y2="-5" class="axis-line" />
                 <line x1="40" y1="5" x2="40" y2="-5" class="axis-line" />
                 <line x1="80" y1="5" x2="80" y2="-5" class="axis-line" />
 
-                <!-- Метки на оси Y (равномерные расстояния) -->
                 <line x1="5" y1="80" x2="-5" y2="80" class="axis-line" />
                 <line x1="5" y1="40" x2="-5" y2="40" class="axis-line" />
                 <line x1="5" y1="-40" x2="-5" y2="-40" class="axis-line" />
                 <line x1="5" y1="-80" x2="-5" y2="-80" class="axis-line" />
 
-                <!-- Подписи на оси X -->
                 <text x="-85" y="15" class="axis-text">-R</text>
                 <text x="-50" y="15" class="axis-text">-R/2</text>
                 <text x="33" y="15" class="axis-text">R/2</text>
                 <text x="77" y="15" class="axis-text">R</text>
 
-                <!-- Подписи на оси Y -->
                 <text x="10" y="82" class="axis-text">-R</text>
                 <text x="10" y="42" class="axis-text">-R/2</text>
                 <text x="10" y="-37" class="axis-text">R/2</text>
                 <text x="10" y="-77" class="axis-text">R</text>
 
-                <!-- Подписи X и Y -->
                 <text x="90" y="-10" class="axis-text">X</text>
                 <text x="6" y="-93" class="axis-text">Y</text>
 
