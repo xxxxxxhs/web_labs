@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+group 'lab2'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://repository.jboss.org/nexus/content/repositories/public/"
+    }
+}
+
+dependencies {
+    providedCompile 'javax.servlet:javax.servlet-api:4.0.1'
+
+    implementation 'javax.servlet:jstl:1.2'
+}
+
+
+war {
+    from 'src/html' // Путь к JSP и JS файлам
+    webInf {
+        from 'src/lib' // Путь к JAR библиотекам
+        from 'web/web/WEB-INF' // Путь к web.xml
+    }
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/']
+        }
+    }
+}
